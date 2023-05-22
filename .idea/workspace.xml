@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="database connection codes added to the database class">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/HeroDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/HeroDao.java" afterDir="false" />
+    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="adds Squad Database Access methods to the SquadDao class">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,28 @@
       <option name="project" value="LOCAL" />
       <updated>1684737486633</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="adds Hero Database Access methods to the HeroDao class">
+      <created>1684737670346</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1684737670346</updated>
+    </task>
+    <task id="LOCAL-00007" summary="adds Hero Database Access methods to the HeroDao class">
+      <created>1684737716630</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1684737716630</updated>
+    </task>
+    <task id="LOCAL-00008" summary="adds Squad Database Access methods to the SquadDao class">
+      <created>1684737846428</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1684737846429</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -115,17 +136,8 @@
     <MESSAGE value="adds Hero properties to the Hero class" />
     <MESSAGE value="adds Squad properties to the Squad class" />
     <MESSAGE value="database connection codes added to the database class" />
-    <option name="LAST_COMMIT_MESSAGE" value="database connection codes added to the database class" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="adds Hero Database Access methods to the HeroDao class" />
+    <MESSAGE value="adds Squad Database Access methods to the SquadDao class" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds Squad Database Access methods to the SquadDao class" />
   </component>
 </project>

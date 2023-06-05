@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.dao.HeroDao;
 import org.example.dao.SquadDao;
+import org.example.db.database;
 import org.example.model.Hero;
 import org.example.model.Squad;
 
@@ -50,7 +51,7 @@ public abstract class Main {
             Integer weakness_score = Integer.parseInt(req.queryParams("weakness_score"));
             String squad = "";
 
-            Hero newHero = new Hero(hero.toUpperCase(),age,power,power_score,weakness,weakness_score,squad);
+            Hero newHero = new Hero(hero.toUpperCase(),age,power,power_score,weakness,weakness_score,squad.toUpperCase());
             HeroDao.addHero(newHero);
             res.redirect("/home");
             return null ;
@@ -76,13 +77,12 @@ public abstract class Main {
         get("/assign/:squad", (req,res) -> {
 
             String squad =  req.params("squad");
+            Map<String, Object> combinedList = new HashMap<>();
 
             if(HeroDao.heroCount(squad) < SquadDao.maxSize(squad)) {
-                HeroDao.membership(squad);
+                combinedList.put("querySquad", squad);
+                combinedList.put("heroObject", HeroDao.membership(squad));
             } else {res.redirect("/full-squad");}
-            Map<String, Object> combinedList = new HashMap<>();
-            combinedList.put("querySquad", squad);
-            combinedList.put("heroObject", HeroDao.membership(squad));
 
             return new ModelAndView(combinedList, "assign-squad.hbs");
         },views);

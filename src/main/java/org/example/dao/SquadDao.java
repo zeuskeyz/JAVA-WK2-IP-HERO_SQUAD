@@ -34,7 +34,7 @@ public class SquadDao {
     public static Integer maxSize (String squad) {
         List<Squad> squadSize = null;
         try(Connection db = database.getConnect().open()){
-            String sizeList = "SELECT size from squads WHERE squad = (:squad)"; //gets the size
+            String sizeList = "SELECT size FROM squads WHERE squad = (:squad)"; //gets the size
             squadSize = db.createQuery(sizeList).addParameter("squad", squad).executeAndFetch(Squad.class);
         } catch (Exception error) { System.out.println(error.getMessage());}
         return squadSize.get(0).getSize();

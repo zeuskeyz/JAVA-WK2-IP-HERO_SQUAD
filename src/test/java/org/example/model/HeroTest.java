@@ -7,14 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HeroTest {
 
-    private String hero;
-    private Integer age;
-    private String power;
-    private Integer power_score;
-    private String weakness;
-    private Integer weakness_score;
-    private String squad;
-
     Hero testHero = new Hero("Hero Name", 99,"Some Power",10, "Some Weakness", 1, "Avengers");
 
     @Test

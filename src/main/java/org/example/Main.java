@@ -2,7 +2,6 @@ package org.example;
 
 import org.example.dao.HeroDao;
 import org.example.dao.SquadDao;
-import org.example.db.database;
 import org.example.model.Hero;
 import org.example.model.Squad;
 

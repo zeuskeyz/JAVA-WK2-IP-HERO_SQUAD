@@ -1,7 +1,6 @@
 package org.example.dao;
 
 import org.example.db.database;
-import org.example.model.Hero;
 import org.example.model.Squad;
 import org.sql2o.Connection;
 

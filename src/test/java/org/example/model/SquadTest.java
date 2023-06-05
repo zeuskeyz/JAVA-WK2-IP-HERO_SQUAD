@@ -7,10 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SquadTest {
 
-    private  String squad;
-    private  String cause;
-    private  Integer size;
-
     Squad testSquad = new Squad("Coders", "Write Code", 7);
 
     @Test

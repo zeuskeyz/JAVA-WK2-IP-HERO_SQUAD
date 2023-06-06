@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="fixes font colors from black to white in the case of no heroes or no squads">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="adds a README file to the project">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/killers.jpeg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +44,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Pgt6PUvMim8xOkzxpboEPuvA8M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -154,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685954457926</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="adds a README file to the project">
+      <created>1685973646857</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1685973646857</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +189,7 @@
     <MESSAGE value="adds Squad Database Access methods to the SquadDao class" />
     <MESSAGE value="adds test files for the Hero and Squad Models" />
     <MESSAGE value="fixes font colors from black to white in the case of no heroes or no squads" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixes font colors from black to white in the case of no heroes or no squads" />
+    <MESSAGE value="adds a README file to the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds a README file to the project" />
   </component>
 </project>

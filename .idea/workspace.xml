@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="adds automatic table creation functionality to the app upon app start and introduces the deleted variable in all the models to allow for a soft delete">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/HeroDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/HeroDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/SquadDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/SquadDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/assign-squad.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/assign-squad.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout.hbs" afterDir="false" />
-    </list>
+    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="adds automatic table creation functionality to the app upon app start and introduces the deleted variable in all the models to allow for a soft delete" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -238,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686205268820</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="adds automatic table creation functionality to the app upon app start and introduces the deleted variable in all the models to allow for a soft delete">
+      <created>1686261008021</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1686261008021</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +265,7 @@
     <MESSAGE value="fixes font colors from black to white in the case of no heroes or no squads" />
     <MESSAGE value="adds a README file to the project" />
     <MESSAGE value="reduced the background pictures to 3" />
+    <MESSAGE value="add a resign squad command to the squadDao which enables the squad to be removed from the heroes table once a squad is deleted" />
     <MESSAGE value="adds automatic table creation functionality to the app upon app start and introduces the deleted variable in all the models to allow for a soft delete" />
     <option name="LAST_COMMIT_MESSAGE" value="adds automatic table creation functionality to the app upon app start and introduces the deleted variable in all the models to allow for a soft delete" />
   </component>

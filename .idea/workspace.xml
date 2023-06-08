@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="adds a README file to the project">
+    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="adds a resignSquad feature to the HeroDao that enables a squad to be un-assigned from the hero upon deletion of squad">
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/HeroDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/HeroDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/SquadDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/SquadDao.java" afterDir="false" />
     </list>
@@ -168,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685973646857</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="adds a resignSquad feature to the HeroDao that enables a squad to be un-assigned from the hero upon deletion of squad">
+      <created>1686262377279</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686262377280</updated>
+    </task>
+    <task id="LOCAL-00013" summary="adds a resignSquad feature to the HeroDao that enables a squad to be un-assigned from the hero upon deletion of squad">
+      <created>1686262393831</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686262393831</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -209,6 +223,7 @@
     <MESSAGE value="adds test files for the Hero and Squad Models" />
     <MESSAGE value="fixes font colors from black to white in the case of no heroes or no squads" />
     <MESSAGE value="adds a README file to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds a README file to the project" />
+    <MESSAGE value="adds a resignSquad feature to the HeroDao that enables a squad to be un-assigned from the hero upon deletion of squad" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds a resignSquad feature to the HeroDao that enables a squad to be un-assigned from the hero upon deletion of squad" />
   </component>
 </project>

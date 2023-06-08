@@ -71,7 +71,7 @@ public class HeroDao {
         } catch (Exception error) { System.out.println(error.getMessage());}
     }
 
-    //DELETES A SQUAD FROM THE DATABASE
+    //UN-ASSIGNS A HERO'S SQUAD MEMBERSHIP UPON DELETION OF SQUAD
     public static void resignSquad(String name){
         try(Connection db = database.getConnect().open()){
             String emptySquad = "UPDATE heroes SET squad = null WHERE squad = (:squad);";
@@ -79,7 +79,7 @@ public class HeroDao {
         } catch (Exception error) { System.out.println(error.getMessage());}
     }
 
-    //DELETES HERO fFROM DATABASE
+    //DELETES HERO FROM DATABASE
     public static void deleteHero(String name){
         try(Connection db = database.getConnect().open()){
             String deletedHero = "UPDATE heroes SET deleted = (true) WHERE hero = (:hero);";

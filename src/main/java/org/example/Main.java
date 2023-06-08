@@ -27,7 +27,7 @@ public abstract class Main {
         get("/", (request, response) -> {
             SquadDao.getStarted();
             HeroDao.getStarted();
-            return new ModelAndView(new HashMap<>(),"landing-page.hbs");
+            return new ModelAndView (new HashMap<>(),"landing-page.hbs");
         }, views);
 
         //HOME PAGE
@@ -36,7 +36,7 @@ public abstract class Main {
             Map<String, Object> combinedList = new HashMap<>();
             combinedList.put("heroObject", HeroDao.getAllHeroes());
             combinedList.put("squadObject", SquadDao.getAllSquads());
-            return new ModelAndView(combinedList, "home.hbs");
+            return new ModelAndView (combinedList, "home.hbs");
 
         },views);
 
@@ -64,13 +64,14 @@ public abstract class Main {
         //SQUAD ADDING FORM PAGE
         get("/add-squad", (req,res) -> new ModelAndView(new HashMap<>(),"add-squad.hbs"), views );
 
-        //SENDING HERO DETAILS TO DATABASE
+        //SENDING SQUAD DETAILS TO DATABASE
         post("/add-squad", (req,res)-> {
 
             String squad = req.queryParams("squad");
             String cause = req.queryParams("cause");
             Integer size = Integer.parseInt(req.queryParams("size"));
             Boolean deleted = false;
+
             Squad newSquad = new Squad(squad,cause,size, deleted);
             SquadDao.addSquad(newSquad);
             res.redirect("/home");
@@ -82,11 +83,13 @@ public abstract class Main {
         get("/assign/:squad", (req,res) -> {
 
             String squad =  req.params("squad");
+
             Map<String, Object> combinedList = new HashMap<>();
 
             if(HeroDao.heroCount(squad) < SquadDao.maxSize(squad)) {
                 combinedList.put("querySquad", squad);
                 combinedList.put("heroObject", HeroDao.membership(squad));
+                System.out.println(combinedList);
             } else {res.redirect("/full-squad");}
 
             return new ModelAndView(combinedList, "assign-squad.hbs");

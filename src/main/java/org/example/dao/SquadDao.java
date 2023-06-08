@@ -52,7 +52,9 @@ public class SquadDao {
     public static void deleteSquad(String name){
         try(Connection db = database.getConnect().open()){
             String deletedSquad = " UPDATE squads SET deleted = (true) WHERE squad = (:squad);";
+            String resignSquad = "UPDATE heroes SET squad = null WHERE squad = (:squad);";
             db.createQuery(deletedSquad).addParameter("squad", name).executeUpdate();
+            db.createQuery(resignSquad).addParameter("squad", name).executeUpdate();
         } catch (Exception error) { System.out.println(error.getMessage());}
     }
 

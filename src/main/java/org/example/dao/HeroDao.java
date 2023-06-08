@@ -11,7 +11,7 @@ public class HeroDao {
     public static void getStarted (){
 
         try(Connection db = database.getConnect().open()){
-            String createTable = "CREATE TABLE IF NOT EXISTS heroes(hero varchar unique, age integer, power varchar, power_score integer, weakness varchar, weakness_score integer, squad varchar, deleted boolean default 'false');";
+            String createTable = "CREATE TABLE IF NOT EXISTS heroes (hero varchar unique, age integer, power varchar, power_score integer, weakness varchar, weakness_score integer, squad varchar, deleted boolean default 'false');";
             db.createQuery(createTable).executeUpdate();
         } catch (Exception error) {System.out.println(error.getMessage());}
     }
@@ -78,7 +78,6 @@ public class HeroDao {
             db.createQuery(deletedHero).addParameter("hero", name).executeUpdate();
         } catch (Exception error) { System.out.println(error.getMessage());}
     }
-
 
 }
 

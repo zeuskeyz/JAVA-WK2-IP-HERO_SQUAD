@@ -7,7 +7,7 @@
                         {{#each heroObject}}
                             <div class="card col-md-2 col-sm-12 m-1 border border-0 opacity-75 p-0" style="max-width: 20rem;">
                                 <div class="card-header"> <h6 class="text-dark">{{hero}}</h6> </div>
-                                <div class="card-body shadow-lg text-bg-dark opacity-100">
+                                <div class="card-body shadow-lg text-bg-danger opacity-100">
                                     <small class="card-text lead fs-6"><i class="bi bi-hourglass-split"></i> <small>{{age}}yrs</small></small><br>
                                     <small class="card-text lead fs-6"><i class="bi bi-gem"></i>  <small>{{power}}</small></small><br>
                                     <small class="card-text lead fs-6"><i class="bi bi-star-fill"></i> <small>{{power_score}}/10</small></small><br>
@@ -30,9 +30,9 @@
                         {{#each squadObject}}
                         <tr>
                             <td>
-                                <a href = "/assign/{{squad}}" class="btn btn-outline-light d-flex col-11" type="button">
+                                <a href = "/assign/{{squad}}" class="btn btn-outline-light text-danger d-flex col-11" type="button">
                                     <div class="text-start me-auto">{{squad}} </div>
-                                    <div class="ms-auto text-light"> {{size}} <i class="bi bi-person-circle"></i></div>
+                                    <div class="ms-auto text-danger"> {{size}} <i class="bi bi-person-circle"></i></div>
                                 </a>
                             </td>
                             <td>

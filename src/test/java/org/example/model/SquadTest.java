@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SquadTest {
 
-    Squad testSquad = new Squad("Coders", "Write Code", 7);
+    Squad testSquad = new Squad("Coders", "Write Code", 7, false);
 
     @Test
     @DisplayName(value = "SQUAD NAME")

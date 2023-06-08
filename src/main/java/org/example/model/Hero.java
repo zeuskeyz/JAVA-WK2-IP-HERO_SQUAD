@@ -8,7 +8,9 @@ public class Hero {
     private String weakness;
     private Integer weakness_score;
     private String squad;
+    private Boolean deleted;
 
+    //SETTERS
     public void setHero(String hero) {this.hero= hero;}
     public void setAge(Integer age) {this.age = age;}
     public void setPower(String power) {this.power = power;}
@@ -16,7 +18,9 @@ public class Hero {
     public void setWeakness(String weakness) {this.weakness = weakness;}
     public void setWeakness_score(Integer weakness_score) {this.weakness_score = weakness_score;}
     public void setSquad(String squad) {this.squad = squad;}
+    public void setDeleted(Boolean deleted) {this.deleted = deleted;}
 
+    //GETTERS
     public String getHero() {return hero;}
     public Integer getAge() {return age;}
     public String getPower() {return power;}
@@ -24,8 +28,10 @@ public class Hero {
     public String getWeakness() {return weakness;}
     public Integer getWeakness_score() {return weakness_score;}
     public String getSquad() {return squad;}
+    public Boolean getDeleted() {return deleted;}
 
-    public Hero(String hero, Integer age, String power, Integer power_score, String weakness, Integer weakness_score, String squad) {
+    //CONSTRUCTOR
+    public Hero(String hero, Integer age, String power, Integer power_score, String weakness, Integer weakness_score, String squad, Boolean deleted) {
         this.hero = hero;
         this.age = age;
         this.power = power;
@@ -33,8 +39,10 @@ public class Hero {
         this.weakness = weakness;
         this.weakness_score = weakness_score;
         this.squad = squad;
+        this.deleted = deleted;
     }
 
+    //TO_STRING
     @Override
     public String toString() {
         return "Hero{" +
@@ -45,6 +53,7 @@ public class Hero {
                 ", weakness='" + weakness + '\'' +
                 ", weakness_score=" + weakness_score +
                 ", squad='" + squad + '\'' +
+                ", deleted=" + deleted +
                 '}';
     }
 }

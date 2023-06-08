@@ -24,7 +24,11 @@ public abstract class Main {
         HandlebarsTemplateEngine views = new HandlebarsTemplateEngine();
 
         //LANDING PAGE
-        get("/", (req,res) -> new ModelAndView(new HashMap<>(),"landing-page.hbs"), views );
+        get("/", (request, response) -> {
+            SquadDao.getStarted();
+            HeroDao.getStarted();
+            return new ModelAndView(new HashMap<>(),"landing-page.hbs");
+        }, views);
 
         //HOME PAGE
         get("/home", (req,res) -> {
@@ -49,8 +53,9 @@ public abstract class Main {
             String weakness = req.queryParams("weakness");
             Integer weakness_score = Integer.parseInt(req.queryParams("weakness_score"));
             String squad = "";
+            Boolean deleted = false;
 
-            Hero newHero = new Hero(hero.toUpperCase(),age,power,power_score,weakness,weakness_score,squad.toUpperCase());
+            Hero newHero = new Hero(hero.toUpperCase(),age,power,power_score,weakness,weakness_score,squad.toUpperCase(),deleted);
             HeroDao.addHero(newHero);
             res.redirect("/home");
             return null ;
@@ -65,7 +70,8 @@ public abstract class Main {
             String squad = req.queryParams("squad");
             String cause = req.queryParams("cause");
             Integer size = Integer.parseInt(req.queryParams("size"));
-            Squad newSquad = new Squad(squad,cause,size);
+            Boolean deleted = false;
+            Squad newSquad = new Squad(squad,cause,size, deleted);
             SquadDao.addSquad(newSquad);
             res.redirect("/home");
             return null;

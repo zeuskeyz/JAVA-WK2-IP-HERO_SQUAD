@@ -8,11 +8,20 @@ import java.util.List;
 
 public class SquadDao {
 
+    //CREATES THE SQUADS TABLE IN THE DATABASE UPON STARTING THE APP
+    public static void getStarted (){
+
+        try(Connection db = database.getConnect().open()){
+            String createTable = "CREATE TABLE IF NOT EXISTS squads (squad varchar unique, cause varchar, size integer, deleted boolean default 'false');";
+            db.createQuery(createTable).executeUpdate();
+        } catch (Exception error) {System.out.println(error.getMessage());}
+    }
+
     //GETS A LIST OF ALL THE SQUADS IN OUR DATABASE
     public static List<Squad> getAllSquads (){
         List<Squad> allSquads = null;
         try(Connection db = database.getConnect().open()){
-            String squads = "SELECT * FROM squads;";
+            String squads = "SELECT * FROM squads WHERE deleted = (false);";
             allSquads = db.createQuery(squads).executeAndFetch(Squad.class);
         } catch (Exception error) {
             System.out.println(error.getMessage());
@@ -42,7 +51,7 @@ public class SquadDao {
     //DELETES A SQUAD FROM THE DATABASE
     public static void deleteSquad(String name){
         try(Connection db = database.getConnect().open()){
-            String deletedSquad = "DELETE FROM squads WHERE squad = (:squad);";
+            String deletedSquad = " UPDATE squads SET deleted = (true) WHERE squad = (:squad);";
             db.createQuery(deletedSquad).addParameter("squad", name).executeUpdate();
         } catch (Exception error) { System.out.println(error.getMessage());}
     }

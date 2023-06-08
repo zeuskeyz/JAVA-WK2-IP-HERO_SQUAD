@@ -7,12 +7,21 @@ import java.util.List;
 
 public class HeroDao {
 
+    //CREATES THE HEROES TABLE IN THE DATABASE UPON STARTING THE APP
+    public static void getStarted (){
+
+        try(Connection db = database.getConnect().open()){
+            String createTable = "CREATE TABLE IF NOT EXISTS heroes(hero varchar unique, age integer, power varchar, power_score integer, weakness varchar, weakness_score integer, squad varchar, deleted boolean default 'false');";
+            db.createQuery(createTable).executeUpdate();
+        } catch (Exception error) {System.out.println(error.getMessage());}
+    }
+
     //GETS A LIST OF ALL THE HEROES IN OUR DATABASE
     public static List<Hero> getAllHeroes (){
         List<Hero> allHeroes = null;
 
         try(Connection db = database.getConnect().open()){
-            String heroes = "SELECT * FROM heroes;";
+            String heroes = "SELECT * FROM heroes WHERE deleted = (false);";
             allHeroes = db.createQuery(heroes).executeAndFetch(Hero.class);
 
         } catch (Exception error) {
@@ -24,7 +33,7 @@ public class HeroDao {
     }
 
     //ADDS NEW HERO DETAILS TO THE DATABASE
-    public static void addHero ( Hero newHero) {
+    public static void addHero (Hero newHero) {
         try(Connection db = database.getConnect().open()){
             String heroAdd = "INSERT INTO heroes (hero,age,power,power_score,weakness,weakness_score) VALUES (:hero, :age, :power, :power_score, :weakness, :weakness_score);";
             db.createQuery(heroAdd).bind(newHero).executeUpdate();
@@ -65,7 +74,7 @@ public class HeroDao {
     //DELETES HERO fFROM DATABASE
     public static void deleteHero(String name){
         try(Connection db = database.getConnect().open()){
-            String deletedHero = "DELETE FROM heroes WHERE hero = (:hero);";
+            String deletedHero = "UPDATE heroes SET deleted = (true) WHERE hero = (:hero);";
             db.createQuery(deletedHero).addParameter("hero", name).executeUpdate();
         } catch (Exception error) { System.out.println(error.getMessage());}
     }

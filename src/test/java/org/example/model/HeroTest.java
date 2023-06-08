@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class HeroTest {
 
-    Hero testHero = new Hero("Hero Name", 99,"Some Power",10, "Some Weakness", 1, "Avengers");
+    Hero testHero = new Hero("Hero Name", 99,"Some Power",10, "Some Weakness", 1, "Avengers", false);
 
     @Test
     @DisplayName(value = "HEROES NAME")
@@ -49,5 +49,11 @@ class HeroTest {
     @DisplayName(value = "SQUAD ASSIGNMENT TEST")
     void getSquad() {
         assertEquals("Avengers",testHero.getSquad());
+    }
+
+    @Test
+    @DisplayName(value = "HERO DELETION STATE")
+    void getDeleted() {
+        assertEquals(false,testHero.getDeleted());
     }
 }

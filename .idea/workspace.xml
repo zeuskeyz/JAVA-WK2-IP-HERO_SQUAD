@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="adds a README file to the project">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/images/killers.jpeg" beforeDir="false" />
+    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="reduced the background pictures to 3">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/HeroDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/HeroDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/SquadDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/SquadDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/model/Squad.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/model/Squad.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/model/HeroTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/model/HeroTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/model/SquadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/model/SquadTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +55,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2Pgt6PUvMim8xOkzxpboEPuvA8M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -77,6 +87,37 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.example.model" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HeroTest.getDeleted" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.model.HeroTest.getDeleted&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.HeroTest.getDeleted" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -164,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685973646857</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="reduced the background pictures to 3">
+      <created>1686029525913</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686029525913</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -190,6 +238,7 @@
     <MESSAGE value="adds test files for the Hero and Squad Models" />
     <MESSAGE value="fixes font colors from black to white in the case of no heroes or no squads" />
     <MESSAGE value="adds a README file to the project" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds a README file to the project" />
+    <MESSAGE value="reduced the background pictures to 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="reduced the background pictures to 3" />
   </component>
 </project>

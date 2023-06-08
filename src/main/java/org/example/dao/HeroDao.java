@@ -71,6 +71,14 @@ public class HeroDao {
         } catch (Exception error) { System.out.println(error.getMessage());}
     }
 
+    //DELETES A SQUAD FROM THE DATABASE
+    public static void resignSquad(String name){
+        try(Connection db = database.getConnect().open()){
+            String emptySquad = "UPDATE heroes SET squad = null WHERE squad = (:squad);";
+            db.createQuery(emptySquad).addParameter("squad", name).executeUpdate();
+        } catch (Exception error) { System.out.println(error.getMessage());}
+    }
+
     //DELETES HERO fFROM DATABASE
     public static void deleteHero(String name){
         try(Connection db = database.getConnect().open()){

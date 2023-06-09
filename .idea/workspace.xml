@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="adds a Squad Analysis page and a functionality to remove a hero from a squad">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about-squad.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about-squad.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.hbs" afterDir="false" />
+    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="adds a button that allows user to add assign heroes to a squad from the about-squad page">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +68,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "C:/Users/Shezr/Desktop/webjava",
+    "last_opened_file_path": "C:/Users/Shezr/Desktop/JAVA-WK1-IP-CAESARS-CIPHER/README.md",
     "onboarding.tips.debug.path": "C:/Users/Shezr/Desktop/JAVA-WK2-IP-HERO_SQUAD/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -205,7 +204,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686326519708</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="adds a button that allows user to add assign heroes to a squad from the about-squad page">
+      <created>1686332950889</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1686332950890</updated>
+    </task>
+    <task id="LOCAL-00018" summary="adds a button that allows user to add assign heroes to a squad from the about-squad page">
+      <created>1686332980383</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1686332980383</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -250,7 +263,8 @@
     <MESSAGE value="deletes some commented out code in the SquadDao" />
     <MESSAGE value="adjusts the max attribute of the inputs in the concerned hbs templates" />
     <MESSAGE value="adds a Squad Analysis page and a functionality to remove a hero from a squad" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds a Squad Analysis page and a functionality to remove a hero from a squad" />
+    <MESSAGE value="adds a button that allows user to add assign heroes to a squad from the about-squad page" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds a button that allows user to add assign heroes to a squad from the about-squad page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

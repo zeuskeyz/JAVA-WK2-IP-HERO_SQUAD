@@ -2,6 +2,9 @@
 
 The Superhero Squad Recruitment App is a Java Spark SQL-based application that allows users to recruit a well-balanced team of superheroes for various causes. Users can create and manage heroes, squads, and assign heroes to squads. The app also includes functionality to calculate scores for specific skill areas and has the potential for a turn-based battle system.
 
+#### By: **Sailas O. Hazroun**
+#### Date: **1st June 2023**
+
 ## Features
 
 The Superhero Squad Recruitment App provides the following features:
@@ -15,9 +18,8 @@ The Superhero Squad Recruitment App provides the following features:
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/zeuskeyz/JAVA-WK2-IP-HERO_SQUAD.git`
-2. Navigate to the project directory: `cd superhero-squad-recruitment-app`
-3. Install dependencies: `mvn install`
-4. Run the application: `mvn exec:java`
+2. Install dependencies for Sq2LO, handlebars and others as prompted by the App.
+3. A Java IDE preferably intelliJ IDEA within your PC
 
 ## Technologies Used
 
@@ -27,16 +29,29 @@ The Superhero Squad Recruitment App is built using the following technologies:
 - PostgreSQL: A powerful, open source object-relational database system that uses and extends the SQL language combined with many features that safely store and scale the most complicated data workloads.
 - Maven: A build automation tool for managing dependencies and building the application.
 - Handlebars: A simple templating language. It uses a template and an input object to generate HTML or other text formats.
+- Sq2Lo :
+
 ## Usage
 
 1. Launch the application.
 2. Access the app via a web browser at `http://localhost:4567`.
 3. Use the provided user interface to create heroes, squads, and assign heroes to squads.
-4. Calculate scores for specific skill areas to evaluate squad strength.
+4. You can click on the squad button to see more info on the squad.
+5. The Heroes & Squads Link will take you to table summary page of all the Heroes and Squads added.
+6. Heroes and Squads can be added via the  nav links or the footer buttons.
+7. Click on the squad to view scores to evaluate squad strength.
+
+## Known Bugs
+
+There are no known bugs on this project. In case you find some please share via email: zeuskeys@gmail.com
 
 ## Contributions
 
-Contributions to the Superhero Squad Recruitment App are welcome! If you find any issues or have ideas for new features, please submit them via GitHub issues. Feel free to fork the repository and submit pull requests for enhancements or bug fixes.
+Contributions to the Superhero Squad Recruitment App are welcome! If you find any issues or have ideas for new features, please submit them via zeuskeyz@gmail.com. Feel free to fork the repository and submit pull requests for enhancements or bug fixes.
+
+## Github URL Link
+
+- https://github.com/zeuskeyz/JAVA-WK2-IP-HERO_SQUAD.git
 
 ## License
 
@@ -45,3 +60,6 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 ## Acknowledgments
 
 This project was inspired by the love for superheroes and the desire to create a fun and engaging app. Thanks to the open-source community for providing valuable resources and libraries that made this project possible.
+
+
+Copyright (c) 2023 **SHEZRON**

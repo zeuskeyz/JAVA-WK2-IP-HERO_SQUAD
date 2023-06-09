@@ -1,6 +1,7 @@
 package org.example.dao;
 
 import org.example.db.database;
+import org.example.model.Hero;
 import org.example.model.Squad;
 import org.sql2o.Connection;
 
@@ -28,6 +29,16 @@ public class SquadDao {
             return allSquads;
         }
         return allSquads;
+    }
+
+    //GETS A PARTICULAR SQUAD FROM THE SQUADS TABLE
+    public static List<Squad> squadDetails (String squad) {
+        List<Squad> squadDetailsList = null;
+        try(Connection db = database.getConnect().open()){
+            String squadDetailsQuery = "SELECT * FROM squads WHERE squad = (:squad);";
+            squadDetailsList = db.createQuery(squadDetailsQuery).addParameter("squad", squad).executeAndFetch(Squad.class);
+        } catch (Exception error) { System.out.println(error.getMessage());}
+        return squadDetailsList;
     }
 
     //ADDS NEW SQUAD DETAILS TO THE DATABASE

@@ -55,7 +55,7 @@ public abstract class Main {
             String squad = "";
             Boolean deleted = false;
 
-            Hero newHero = new Hero(hero.toUpperCase(),age,power,power_score,weakness,weakness_score,squad.toUpperCase(),deleted);
+            Hero newHero = new Hero(hero.toUpperCase(),age,power,power_score,weakness,weakness_score,squad,deleted);
             HeroDao.addHero(newHero);
             res.redirect("/home");
             return null ;
@@ -72,7 +72,7 @@ public abstract class Main {
             Integer size = Integer.parseInt(req.queryParams("size"));
             Boolean deleted = false;
 
-            Squad newSquad = new Squad(squad,cause,size, deleted);
+            Squad newSquad = new Squad(squad.toUpperCase(),cause,size, deleted);
             SquadDao.addSquad(newSquad);
             res.redirect("/home");
             return null;
@@ -81,49 +81,58 @@ public abstract class Main {
 
         //HERO TO SQUAD ASSIGNMENT FORM
         get("/assign/:squad", (req,res) -> {
-
             String squad =  req.params("squad");
-
             Map<String, Object> combinedList = new HashMap<>();
-
             if(HeroDao.heroCount(squad) < SquadDao.maxSize(squad)) {
                 combinedList.put("querySquad", squad);
                 combinedList.put("heroObject", HeroDao.membership(squad));
-                System.out.println(combinedList);
             } else {res.redirect("/full-squad");}
-
             return new ModelAndView(combinedList, "assign-squad.hbs");
         },views);
 
         //ASSIGNING A HER0 TO A SQUAD
         post("/assign/:squad", (req,res) -> {
-
             String hero = req.queryParams("hero");
             String squad = req.queryParams("squad");
+
             HeroDao.updateMembership(hero, squad);
             res.redirect("/home");
             return null;
+        },views);
 
+        //VIEWING SQUAD DETAILS
+        get("/about/:squad", (req, res) -> {
+            String squad = req.params("squad");
+            HeroDao.scores(squad);
+            Map<String, Object> combinedList = new HashMap<>();
+            combinedList.put("squadDetails", SquadDao.squadDetails(squad));
+            combinedList.put("squadHeroes", HeroDao.squadHeroes(squad));
+            combinedList.put("squadScores", HeroDao.scores(squad));
+            return new ModelAndView (combinedList,"about-squad.hbs");
+        }, views);
+
+        //REMOVE A HERO FROM A SQUAD
+        get("/remove-hero/:hero", (req,res)-> {
+            String hero = req.params(":hero");
+            HeroDao.removeHero(hero);
+            res.redirect("/home");
+            return null;
         },views);
 
         //DELETING A HERO FROM THE PAGE
         get("/delete-hero/:hero", (req,res)-> {
-
             String name = req.params(":hero");
             HeroDao.deleteHero(name);
             res.redirect("/home");
             return null;
-
         },views);
 
         //DELETING A SQUAD FROM THE PAGE
         get("/delete-squad/:squad", (req,res)-> {
-
             String name = req.params(":squad");
             SquadDao.deleteSquad(name);
             res.redirect("/home");
             return null;
-
         },views);
 
         //CREATES A PAGE WITH SEARCHABLE TABLE LIST OF ALL HEROES AND SQUADS
@@ -135,6 +144,7 @@ public abstract class Main {
             return new ModelAndView(combinedList, "all.hbs");
 
         },views);
+
 
         //FULL SQUAD ERROR PAGE
         get("/full-squad", (req,res) -> new ModelAndView(new HashMap<>(),"full-squad.hbs"), views );

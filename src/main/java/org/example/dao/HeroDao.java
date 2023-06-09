@@ -44,7 +44,6 @@ public class HeroDao {
     public static Integer heroCount (String squad) {
         Integer heroesInSquad = null;
         try (Connection db = database.getConnect().open()) {
-            //CHECKS THE NUMBER OF HEROES IN THE PARAM SQUAD
             String heroCounter = "SELECT COUNT(*) FROM heroes WHERE squad = (:squad)";
             heroesInSquad = db.createQuery(heroCounter).addParameter("squad", squad).executeScalar(Integer.class);
         } catch (Exception error) {
@@ -70,6 +69,43 @@ public class HeroDao {
             db.createQuery(heroUpdate).addParameter("hero", hero).addParameter("squad", squad).executeUpdate();
         } catch (Exception error) { System.out.println(error.getMessage());}
     }
+
+    //LISTS ALL HEROES IN A PARTICULAR SQUAD
+    public static List<Hero> squadHeroes (String squad) {
+        List<Hero> squadHeroesList = null;
+        try(Connection db = database.getConnect().open()){
+            String squadHeroesQuery = "SELECT * FROM heroes WHERE squad = (:squad);";
+            squadHeroesList = db.createQuery(squadHeroesQuery).addParameter("squad", squad).executeAndFetch(Hero.class);
+        } catch (Exception error) { System.out.println(error.getMessage());}
+        return squadHeroesList;
+    }
+    //GETS SCORES FOR HEROES IN A PARTICULAR SQUAD
+    public static Integer scores (String squad) {
+
+        List<Hero> scoreList = null;
+        Integer avrg_squadScore = 0;
+
+        try(Connection db = database.getConnect().open()){
+
+            String scoreQuery = "SELECT power_score, weakness_score FROM heroes WHERE squad = (:squad);";
+            scoreList = db.createQuery(scoreQuery).addParameter("squad", squad).executeAndFetch(Hero.class);
+            for (int i = 0; i<scoreList.size(); i++) {
+                avrg_squadScore += scoreList.get(i).getPower_score() - scoreList.get(i).getWeakness_score();
+            }
+        } catch (Exception error) { System.out.println(error.getMessage());}
+            Integer squadScore = Math.toIntExact(Math.round(Double.valueOf(avrg_squadScore) / Double.valueOf(heroCount(squad)) * 10));
+        return squadScore;
+    }
+
+    //REMOVE A HERO FROM A SQUAD
+    public static void removeHero (String hero) {
+        try(Connection db = database.getConnect().open()){
+            String heroUpdate = "UPDATE heroes SET squad = null WHERE hero = (:hero)";
+            db.createQuery(heroUpdate).addParameter("hero", hero).executeUpdate();
+        } catch (Exception error) { System.out.println(error.getMessage());}
+    }
+
+
 
     //UN-ASSIGNS A HERO'S SQUAD MEMBERSHIP UPON DELETION OF SQUAD
     public static void resignSquad(String name){

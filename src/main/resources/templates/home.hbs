@@ -1,11 +1,11 @@
 {{#partial "content"}}
     <div class = "container home">
         <div class = "row">
-            <div class="container my-lg-1 col-md-9 col-sm-12">
+            <div class="container my-1 col-md-9 col-sm-12">
                 {{#if heroObject}}
                     <div class="row">
                         {{#each heroObject}}
-                            <div class="card col-md-2 col-sm-12 m-1 border border-0 opacity-75 p-0" style="max-width: 20rem;">
+                            <div class="card col-md-2 col-sm-6 m-1 border border-0 opacity-75 p-0" style="max-width: 20rem;">
                                 <div class="card-header"> <h6 class="text-dark">{{hero}}</h6> </div>
                                 <div class="card-body shadow-lg text-bg-danger opacity-100">
                                     <small class="card-text lead fs-6"><i class="bi bi-hourglass-split"></i> <small>{{age}}yrs</small></small><br>
@@ -30,14 +30,16 @@
                         {{#each squadObject}}
                         <tr>
                             <td>
-                                <a href = "/assign/{{squad}}" class="btn btn-outline-light text-danger d-flex col-11" type="button">
+                                <a href = "/about/{{squad}}" class="btn btn-outline-light text-danger d-flex col-11">
                                     <div class="text-start me-auto">{{squad}} </div>
-                                    <div class="ms-auto text-danger"> {{size}} <i class="bi bi-person-circle"></i></div>
+                                    <div class="ms-auto text-danger">{{size}} <i class="bi bi-person-circle"></i></div>
                                 </a>
                             </td>
                             <td>
+                                <a href="/assign/{{squad}}" class="text-start me-auto text-light text-decoration-none align-self-center"><i class="bi bi-plus-square-fill fs-3"></i></a>
                                 <a href="/delete-squad/{{squad}}" class="text-end text-light text-decoration-none align-self-center" title="delete squad" > <i class="bi bi-x-square-fill fs-3"></i></a>
                             </td>
+
                         </tr>
                         {{/each}}
                         </tbody>

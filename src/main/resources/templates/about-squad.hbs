@@ -1,5 +1,6 @@
 {{#partial "content"}}
-    <div class="container mt-5">
+    <div class="container mt-3">
+
         <div class="row">
             <div class="container-fluid col-3">
                 <div class="text-danger"> <p>SQUAD DETAILS</p> </div>
@@ -19,17 +20,16 @@
             </div>
             <div class="container-fluid col-6">
                 {{#if squadHeroes}}
-                    <div class="text-danger text-center"><p>SQUAD MEMBERS</p></div>
                     <div class="row">
                         {{#each squadHeroes}}
                             <div class="card col-3 m-1 border border-0 opacity-75 p-0" style="max-width: 20rem;">
-                                <div class="card-header"> <h6 class="text-dark">{{hero}}</h6> </div>
+                                <div class="card-header"> <h6 class="text-dark fw-bold">{{hero}}</h6> </div>
                                 <div class="card-body shadow-lg text-bg-danger opacity-100">
                                     <small class="card-text lead fs-6"><i class="bi bi-hourglass-split"></i> <small>{{age}}yrs</small></small><br>
                                     <small class="card-text lead fs-6"><i class="bi bi-gem"></i>  <small>{{power}}</small></small><br>
                                     <small class="card-text lead fs-6"><i class="bi bi-star-fill"></i> <small>{{power_score}}/10</small></small><br>
                                     <small class="card-text lead fs-6"><i class="bi bi-cloud-rain-fill"></i> <small>{{weakness}}</small></small><br>
-                                    <div class="text-center d-flex justify-content-center align-items-bottom mt-1 mb-0"><a href="/remove-hero/{{hero}}" class="card-link shadow-sm text-light mt-1 mb-0" title="delete hero"><i class="bi bi-trash3 text-center"></i></a> </div>
+                                    <div class="mt-1 mb-0"><a href="/remove-hero/{{hero}}" class="btn btn-outline-light shadow-sm mt-1 mb-0" title="delete hero">REMOVE</a> </div>
                                 </div>
                             </div>
                         {{/each}}
@@ -51,11 +51,15 @@
                         <p class="text-end">SQUAD SCORE</p>
                         <p class="lead text-end">{{squadScores}}%</p>
                     </div>
-
                 </div>
-
             </div>
         </div>
+    {{#each squadDetails}}
+        <div class=" text-center my-3">
+            <a href="/assign/{{squad}}" class="text-light text-decoration-none">ADD MEMBERS <i class="bi bi-plus-square-fill"></i></a>
+        </div>
+    {{/each}}
+
     </div>
 {{/partial}}
 

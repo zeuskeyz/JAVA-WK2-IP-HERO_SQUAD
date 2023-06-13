@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="adds a button that allows user to add assign heroes to a squad from the about-squad page">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="5d0d4a53-5c41-4e38-b255-8914a0c3f4f1" name="Changes" comment="updating the README to cature the new changes">
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/HeroDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/HeroDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about-squad.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about-squad.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/landing-page.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/landing-page.hbs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686332980383</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="updating the README to cature the new changes">
+      <created>1686334454428</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1686334454428</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,7 +273,8 @@
     <MESSAGE value="adjusts the max attribute of the inputs in the concerned hbs templates" />
     <MESSAGE value="adds a Squad Analysis page and a functionality to remove a hero from a squad" />
     <MESSAGE value="adds a button that allows user to add assign heroes to a squad from the about-squad page" />
-    <option name="LAST_COMMIT_MESSAGE" value="adds a button that allows user to add assign heroes to a squad from the about-squad page" />
+    <MESSAGE value="updating the README to cature the new changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating the README to cature the new changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

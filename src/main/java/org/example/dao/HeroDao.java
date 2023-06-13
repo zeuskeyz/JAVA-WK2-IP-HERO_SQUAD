@@ -105,8 +105,6 @@ public class HeroDao {
         } catch (Exception error) { System.out.println(error.getMessage());}
     }
 
-
-
     //UN-ASSIGNS A HERO'S SQUAD MEMBERSHIP UPON DELETION OF SQUAD
     public static void resignSquad(String name){
         try(Connection db = database.getConnect().open()){
